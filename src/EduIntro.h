@@ -101,6 +101,10 @@
 
 #include "ServoMotor/ServoMotor.h"
 
+/*      Arduino uno wifi Rev2 accelerometer       */
+
+#include "IMU/IMU.h"
+
 /*
  -----------------------------------------------------------------------------
                                     Constants
