@@ -12,9 +12,12 @@ void Motion::begin(){
   }
 }
 
-void Motion::readAccelerometer(){
+void Motion::readMotion(){
   if (IMU.accelerationAvailable()) {
     IMU.readAcceleration(Motion::_acc_x,Motion::_acc_y,Motion::_acc_z);
+  }
+  if (IMU.gyroscopeAvailable()) {
+    IMU.readGyroscope(Motion::_gyro_x,Motion::_gyro_y,Motion::_gyro_z);
   }
 }
 float Motion::acc_x(){
@@ -26,12 +29,12 @@ float Motion::acc_y(){
 float Motion::acc_z(){
   return Motion::_acc_z;
 }
-void Motion::readAccelerometer(){
-  if (IMU.gyroscopeAvailable()) {
-    float x,y,z;
-    IMU.readGyroscope(x,y,z);
-    Motion::gyro_x=x;
-    Motion::gyro_y=y;
-    Motion::gyro_z=z;
-  }
+float Motion::gyro_x(){
+  return Motion::_gyro_x;
+}
+float Motion::gyro_y(){
+  return Motion::_gyro_y;
+}
+float Motion::gyro_z(){
+  return Motion::_gyro_z;
 }
