@@ -21,6 +21,7 @@ AnalogInput	KEYWORD1
 AnalogInput2	KEYWORD1
 DigitalInput	KEYWORD1
 Output	KEYWORD1
+IMU	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
