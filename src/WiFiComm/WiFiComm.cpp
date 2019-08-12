@@ -7,7 +7,7 @@ WiFiComm::WiFiComm () {
 
 }
 
-void WiFiComm::init(int led, const char* ssid, const char* pass){
+void WiFiComm::init(int led, const char *ssid, const char *pass){
 	
 	//while (!Serial) {;} // wait for serial port to connect. Needed for native USB port only
 	
