@@ -102,8 +102,9 @@
 #include "ServoMotor/ServoMotor.h"
 
 /*      Arduino uno wifi Rev2 accelerometer       */
-#if defined(ARDUINO_ARCH_MEGAAVR)
-#include "IMU/motion.h"
+#ifdef ARDUINO_ARCH_MEGAAVR
+	#include "IMU/motion.h"
+	#include "WiFiComm/WiFiComm.h"
 #endif
 
 /*
