@@ -19,7 +19,7 @@ class WiFiComm
 	
         WiFiComm();
         
-		void init(int led, const char* ssid, cont char* pass);
+		void init(int led, const char* ssid, const char* pass);
 		
 		int getStatus();	
 				
