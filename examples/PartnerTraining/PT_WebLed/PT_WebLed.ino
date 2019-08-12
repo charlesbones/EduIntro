@@ -18,8 +18,8 @@
 
 #include <EduIntro.h>
 
-    const char ssid[] = "adiosadios";   // your network SSID (name)
-    const char pass[] = "";       // your network password (use for WPA, or use as key for WEP)
+    const char ssid[] = "adiosadios";   // your network SSID (name). Must have 8 or more characters.
+    const char pass[] = "";       // your network password (use for WPA, or use as key for WEP). optional, but if set, must have 8 or more characters.
     int keyIndex = 0;       // your network key Index number (needed only for WEP)
 
 WiFiComm MyWiFi;
@@ -38,7 +38,8 @@ void setup() {
 
   // you're connected now, so print out the status
   printWiFiStatus();
-  
+  Serial.print("\t SSID:");
+  Serial.println(WiFi.SSID());
 }
 
 int temp = 0;
