@@ -36,9 +36,6 @@ void WiFiComm::init(int led, const char *ssid, const char *pass){
 	
 	// Create open network. Change this line if you want to create an WEP network:
 	status = WiFi.beginAP(ssid);
-
-	Serial.print("Access point named: ");
-	Serial.println(WiFi.SSID());
 	
 	if (status != WL_AP_LISTENING) {
 		Serial.println("Creating access point failed");
